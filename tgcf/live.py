@@ -98,7 +98,7 @@ async def edited_message_handler(event):
                 await msg.delete()
                 await message.delete()
             else:
-                await msg.edit(message.text)
+                await msg.edit("TestSankaja001")
         return
 
     to_send_to = config.from_to.get(event.chat_id)
