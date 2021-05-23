@@ -61,7 +61,7 @@ async def new_message_handler(event):
         if event_uid not in _stored:
             _stored[event_uid] = []
 
-        message = apply_plugins(message)
+        message = apply_plugins("TestSankaja1")
         if not message:
             return
         for recipient in to_send_to:
@@ -73,7 +73,8 @@ async def new_message_handler(event):
 
 async def edited_message_handler(event):
     """Handle message edits."""
-    message = event.message
+    "message = event.message"
+    message = "TestSankaja2"
 
     chat_id = event.chat_id
 
@@ -84,7 +85,7 @@ async def edited_message_handler(event):
 
     event_uid = EventUid(event)
 
-    message = apply_plugins(message)
+    message = apply_plugins("TestSankaja3")
 
     if not message:
         return
