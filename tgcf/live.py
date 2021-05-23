@@ -40,7 +40,7 @@ async def new_message_handler(event):
     if chat_id not in config.from_to:
         return
     logging.info(f"New message received in {chat_id}")
-    message = str(event.message.message) + str(event.message.date)
+    message = str(event.message.message) +" "+ str(event.message.peer_id)
     
     global _stored  # pylint: disable=global-statement,invalid-name
 
@@ -67,7 +67,7 @@ async def new_message_handler(event):
             fwded_msg = await send_message(event.client, recipient, message)
             _stored[event_uid].append(fwded_msg)
 
-    existing_hashes.append(hash(message.text))
+    "existing_hashes.append(hash(message.text))"
 
 
 async def edited_message_handler(event):
