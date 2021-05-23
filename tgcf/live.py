@@ -40,7 +40,7 @@ async def new_message_handler(event):
     if chat_id not in config.from_to:
         return
     logging.info(f"New message received in {chat_id}")
-    message = event.message + event.chat_id
+    message = event.message
     
     global _stored  # pylint: disable=global-statement,invalid-name
 
