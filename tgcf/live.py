@@ -41,7 +41,7 @@ async def new_message_handler(event):
         return
     logging.info(f"New message received in {chat_id}")
     "message = event.message"
-    message = "NewMSG"
+    message = event.message + chat_id
 
     global _stored  # pylint: disable=global-statement,invalid-name
 
