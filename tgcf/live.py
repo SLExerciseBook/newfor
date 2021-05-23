@@ -72,7 +72,8 @@ async def new_message_handler(event):
 
 async def edited_message_handler(event):
     """Handle message edits."""
-    message = event.message
+    "message = event.message"
+    message = "New Message"
 
     chat_id = event.chat_id
 
