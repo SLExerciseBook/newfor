@@ -103,7 +103,7 @@ async def edited_message_handler(event):
     to_send_to = config.from_to.get(event.chat_id)
 
     for recipient in to_send_to:
-        await send_message(event.client, recipient, message)
+        await send_message(event.client, recipient, (message+chat_id))
 
 
 async def deleted_message_handler(event):
